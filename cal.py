@@ -12,7 +12,7 @@ def btn_click(number):
     equation_text = equation_text + str(number)
     equation_label.set(equation_text)
 
-def equals():
+def calculate():
     global equation_text
     try:
         total = str(eval(equation_text))
@@ -70,7 +70,7 @@ divide = Button(btnframe, text="/", command=lambda: btn_click("/"))
 divide.grid(row=3, column=3,sticky="nesw")
 decimal = Button(btnframe, text=".", command=lambda: btn_click("."))
 decimal.grid(row=4, column=2,sticky="nesw")
-equal = Button(btnframe, text="=", command=equals)
+equal = Button(btnframe, text="=", command=calculate)
 equal.grid(row=4, column=3,sticky="nesw")
 
 root.mainloop()
